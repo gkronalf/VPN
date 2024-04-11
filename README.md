@@ -41,6 +41,10 @@ log /var/log/openvpn.log
 verb 3 
 ```
   
+Для смены типа туннеля необходимо изменить его в блоке dev файлов конфигурации: 
+``` dev tap  ``` - для режима tap
+``` dev tun  ``` - для режима tun
+  
 Так же подготовлены service unit для запуска OpenVPN
   
 service unit для запуска OpenVPN для сервера:
@@ -69,13 +73,9 @@ ExecStart=/usr/sbin/openvpn --cd /etc/openvpn/ --config %i.conf
 WantedBy=multi-user.target
 ```
   
-Для смены типа туннеля необходимо изменить его в блоке dev файлов конфигурации: 
-``` dev tap  ``` - для режима tap
-``` dev tun  ``` - для режима tun
-  
   Настройка стенда осуществляетс по средствам ansible-playbook, который запускается командой: ``` ansible-playbook ./ansible/playbook.yml -i ./ansible/hosts.ini ```
 
-  
+
 
 Вывод iperf3 в режиме туннеля tap  
  <img src="images/openvpn_tap.jpeg" width=420 alt="openvpen_tap">
