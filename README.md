@@ -7,6 +7,9 @@
   
 - Настроить VPN между двумя ВМ в tun/tap режимах, замерить скорость в туннелях, сделать вывод об отличающихся показателях;
 - Поднять RAS на базе OpenVPN с клиентскими сертификатами, подключиться с локальной машины на ВМ.
-
-
-
+  
+Вывод iperf3 в режиме туннеля tap  
+ <img src="images/openvpen_tap.jpeg" alt="openvpen_tap">
+  
+Вывод iperf3 в режиме туннеля tun  
+ <img src="images/openvpen_tun.jpeg" alt="openvpen_tun">
