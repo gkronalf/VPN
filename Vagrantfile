@@ -12,5 +12,15 @@ Vagrant.configure("2") do |config|
    client.vm.hostname = "client.loc" 
    client.vm.network "private_network", ip: "192.168.56.20" 
    end 
-   end
+
+   # if config.vm.define[:vm_name] == "client"
+   #    config.vm.provision "ansible" do |ansible|
+   #     ansible.playbook = "ansible/provision.yml"
+   #     ansible.inventory_path = "ansible/hosts.ini"
+   #     ansible.host_key_checking = "false"
+   #     ansible.limit = "all"
+   #    end
+   # end
+
+end
    
